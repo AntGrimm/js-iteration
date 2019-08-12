@@ -141,7 +141,15 @@ const onlyTheEvenIndexedSurvive = array => {
  * }
  */
 
-const bestMoviesOfTheYear = array => {}
+const bestMoviesOfTheYear = (array, year) => {
+  return array
+    .filter(movie => {
+      return movie.score > 90 && movie.year === year
+    })
+    .map(movie => {
+      return movie.name
+    })
+}
 
 // ...
 
@@ -150,6 +158,8 @@ const bestMoviesOfTheYear = array => {}
  * numbers and returns true if every element of the array is
  * odd.
  */
+
+const everyoneIsOdd = array => {}
 
 // ...
 
