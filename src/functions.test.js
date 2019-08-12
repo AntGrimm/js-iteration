@@ -63,6 +63,12 @@
  * }
  */
 
+const yelling = array => {
+  return array.map(word => {
+    return word.toUpperCase()
+  })
+}
+
 // ...
 
 /**
@@ -72,6 +78,12 @@
  * the numbers multiplied by 2
  */
 
+const doubleTrouble = array => {
+  return array.map(number => {
+    return number * 2
+  }, 0)
+}
+
 // ...
 
 /*
@@ -80,6 +92,13 @@
  * suffixed with " is at index X" where X is the index of the element
  */
 
+const stringyIndexes = array => {
+  return array.map(strings => {
+    const numberOnIndex = array.indexOf(strings)
+    return strings + ' is at index ' + numberOnIndex
+  })
+}
+
 // ...
 
 /*
@@ -87,12 +106,24 @@
  * numbers and returns only the elements that are even
  */
 
+const onlyTheEvenSurvive = array => {
+  return array.filter(number => {
+    return number % 2 === 0
+  })
+}
+
 // ...
 
 /*
  * Define a function onlyTheEvenIndexedSurvive that accepts an array of
  * numbers and returns only the elements at indexes that are even
  */
+
+const onlyTheEvenIndexedSurvive = array => {
+  return array.filter((number, index) => {
+    return index % 2 === 0
+  })
+}
 
 // ...
 
@@ -109,6 +140,8 @@
  *   score: 99
  * }
  */
+
+const bestMoviesOfTheYear = array => {}
 
 // ...
 
@@ -189,7 +222,9 @@ import test from 'ava'
 
 const ensureDefined = (t, method) => {
   if (eval(`typeof ${method}`) !== 'function') {
-    t.fail(`\n\n\n\n\n⚡️⚡️⚡️⚡️⚡️ The next step is to define the function ${method} ⚡️⚡️⚡️⚡️⚡️\n\n\n`)
+    t.fail(
+      `\n\n\n\n\n⚡️⚡️⚡️⚡️⚡️ The next step is to define the function ${method} ⚡️⚡️⚡️⚡️⚡️\n\n\n`
+    )
   }
 }
 
