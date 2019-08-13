@@ -159,7 +159,19 @@ const bestMoviesOfTheYear = (array, year) => {
  * odd.
  */
 
-const everyoneIsOdd = array => {}
+const everyoneIsOdd = array => {
+  return array
+    .filter(number => {
+      return number
+    })
+    .map(number => {
+      if (number % 2 === 0) {
+        return false
+      } else {
+        return true
+      }
+    })
+}
 
 // ...
 
